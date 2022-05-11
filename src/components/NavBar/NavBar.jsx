@@ -1,11 +1,18 @@
 import logo from "../../images/logo.svg";
 import menu from "../../images/icon-menu.svg";
 import { FaAngleDown } from "react-icons/fa";
+import { navBarVariants } from "./Animations";
+import { motion } from "framer-motion";
 import "./NavBar.scss";
 
 const NavBar = () => {
   return (
-    <header className="header flex">
+    <motion.header
+      className="header flex"
+      initial="hidden"
+      animate="visible"
+      variants={navBarVariants}
+    >
       <img src={logo} alt="logo" className="logo" />
       <nav className="nav">
         <ul className="nav__list flex">
@@ -36,7 +43,7 @@ const NavBar = () => {
       <div className="burger__menu">
         <img src={menu} alt="" />
       </div>
-    </header>
+    </motion.header>
   );
 };
 
