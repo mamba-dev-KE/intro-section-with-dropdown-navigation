@@ -1,0 +1,74 @@
+// colors
+$white: hsl(0, 0%, 98%);
+$gray: hsl(0, 0%, 41%);
+$dark: hsl(0, 0%, 8%);
+
+.header {
+  min-height: 5rem;
+  align-items: center;
+  gap: 8rem;
+
+  width: min(100% - 8rem, 500rem);
+  margin-inline: auto;
+  margin-top: 2rem;
+
+  @media (max-width: 960px) {
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  flex: 1;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+}
+
+.nav__list {
+  list-style-type: none;
+  gap: 4rem;
+  align-items: center;
+
+  & li:nth-of-type(1),
+  & li:nth-of-type(2) {
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  & li:nth-of-type(5) {
+    margin-left: auto;
+  }
+}
+
+.nav__list-item {
+  a {
+    color: $gray;
+    text-decoration: none;
+  }
+
+  svg {
+    color: $gray;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.nav__list-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: $gray;
+
+  border-radius: 1.5rem;
+  border: 2px solid $gray;
+}
+
+.burger__menu {
+  display: none;
+
+  @media (max-width: 960px) {
+    display: block;
+  }
+}

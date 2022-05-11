@@ -1,0 +1,17 @@
+@use "partials";
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+// colors
+$white: hsl(0, 0%, 98%);
+$gray: hsl(0, 0%, 41%);
+$dark: hsl(0, 0%, 8%);
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 1.8rem;
+  font-family: "Epilogue", sans-serif;
+
+  background-color: $white;
+}
